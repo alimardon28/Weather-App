@@ -18,6 +18,15 @@ body{
     background-position: center;
 }
 
+img{
+    width: 180px;
+    height: 150px;
+}
+
+.icon{
+    text-align: center;
+    margin: 10px;
+}
 .main{
     min-width: 270px;
     min-height: 100vh;

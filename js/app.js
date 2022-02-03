@@ -33,6 +33,9 @@ function displayResults(weather){
     let weatherTemp = document.querySelector('.temp');
     weatherTemp.innerHTML = `${Math.round(weather.main.temp)}<span>°C</span>`;
 
+   let elIcons = document.querySelector('.icon');
+   elIcons.innerHTML =`${weather.icon}`
+
     let elWeather = document.querySelector('.weather');
     elWeather.innerHTML = weather.weather[0].main;
 
