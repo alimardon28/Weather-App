@@ -1,10 +1,19 @@
+let elLocationCity = document.querySelector('.city__weather');
+let date = document.querySelector('.date');
+let weatherTemp = document.querySelector('.temp');
+let elTempIcons = document.getElementById('#temp__icon');
+let elWeather = document.querySelector('.weather');
+let averageTemperature = document.querySelector('.average__temperature');
+let img;
+
+
+const elCitySearchInput = document.querySelector(".city__search");
+// const elCitySearchButton = document.querySelector(".city__search-button");
+
 const api = {
     weatherKey: "0d22eda295693becc5ee5b1607ec3a8b",
     weatherUrl: "https://api.openweathermap.org/data/2.5/",
 };
-
-const elCitySearchInput = document.querySelector(".city__search");
-// const elCitySearchButton = document.querySelector(".city__search-button");
 
 elCitySearchInput.addEventListener("keypress" , setQuery);
 
@@ -22,24 +31,28 @@ function getResults(query){
 
 function displayResults(weather){
     console.log(weather);
-
-    let elLocationCity = document.querySelector('.city__weather')
     elLocationCity.innerHTML = `${weather.name} , ${weather.sys.country}`;
 
     let now = new Date();
-    let date = document.querySelector('.date');
     date.innerHTML = dateToCreate(now);
 
-    let weatherTemp = document.querySelector('.temp');
     weatherTemp.innerHTML = `${Math.round(weather.main.temp)}<span>°C</span>`;
 
-   let elIcons = document.querySelector('.icon');
-   elIcons.innerHTML =`${weather.icon}`
+    // if(id<300 && id>200){
+    //     elTempIcons.textContent.src="./img/weather.png"
+    // }else if(id<400 && id>300){
+    //     elTempIcons.textContent.src="./img/cloud.svg"
+    // }else  if(id<600 && id>500){
+    //     elTempIcons.textContent.src="./img/rain.svg"
+    // }else  if(id<700 && id>600){
+    //     elTempIcons.textContent.src="./img/snow.svg"
+    // }else  if(id<800 && id>700){
+    //     elTempIcons.textContent.src="./img/cloud.svg"
+    // }else  if(id==800){
+    //     elTempIcons.textContent.src="./img/sunny-sunny.svg"
+    // }
 
-    let elWeather = document.querySelector('.weather');
     elWeather.innerHTML = weather.weather[0].main;
-
-    let averageTemperature = document.querySelector('.average__temperature');
     averageTemperature.innerHTML = `${Math.round(weather.main.temp_min)}°C / ${Math.round(weather.main.temp_max)}°C`;
 }
 
