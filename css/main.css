@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 16px;
+    background: #000;
+    background-image: url(../img/Zima.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main{
+    min-width: 270px;
+    min-height: 100vh;
+    color: #fff;
+    padding-top: 40px;
+}
+
+/* INPUT GROUP */
+
+.city{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.city__search{
+  height: 40px;
+  width:100%;
+  border-radius: 16px 0px 16px 0px;
+  background-color: transparent;
+  border: 2px solid  #fff;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.city__search-button{
+    border-radius: 0px 0px 16px 0px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.bi-search{
+    font-size: 22px;
+}
+
+/* CITY WEATHER */
+.city__weather{
+    margin: 5px;
+    padding-top:20px;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.city__weather-date{
+    margin: 6px;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* CITY TEMP */
+
+.city__temp{
+    margin: 0px;
+    padding: 0px;
+}
+
+.temp{
+    margin: 8px;
+    padding:0px;
+    font-size: 80px;
+    line-height: 70px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.weather{
+    margin: 10px;
+    padding-top: 25px;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: 800;
+}
+
+.average__temperature{
+    margin: 10px;
+    padding-top: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
