@@ -2,6 +2,7 @@ let elLocationCity = document.querySelector('.city__weather');
 let date = document.querySelector('.date');
 let weatherTemp = document.querySelector('.temp');
 let elWeather = document.querySelector('.weather');
+let averageTemperature = document.querySelector('.average__temperature');
 
 
 
@@ -27,7 +28,6 @@ function getResults(query){
 }
 
 function displayResults(weather){
-    console.log(weather);
     elLocationCity.innerHTML = `${weather.name} , ${weather.sys.country}`;
 
     let now = new Date();
