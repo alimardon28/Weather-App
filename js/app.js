@@ -3,6 +3,9 @@ let date = document.querySelector('.date');
 let weatherTemp = document.querySelector('.temp');
 let elWeather = document.querySelector('.weather');
 let averageTemperature = document.querySelector('.average__temperature');
+let elIcon = document.querySelector('.icons');
+
+const iconUrl = "http://openweathermap.org/img/w/";
 
 
 
@@ -35,6 +38,7 @@ function displayResults(weather){
 
     weatherTemp.innerHTML = `${Math.round(weather.main.temp)}<span>°C</span>`;
 
+    elIcon.src = iconUrl + weather.weather[0].icon + ".png";
 
     elWeather.innerHTML = weather.weather[0].main;
     averageTemperature.innerHTML = `${Math.round(weather.main.temp_min)}°C / ${Math.round(weather.main.temp_max)}°C`;
